@@ -5,7 +5,6 @@ $(document).ready(function(){
 		var x = e.pageX - this.offsetLeft;
 		var y = e.pageY - this.offsetTop;
 		coorHandler(x, y);
-	//$("#status2").html("X = " + x + "<br>" + "Y = " + y);
 	});
 })
 
@@ -26,23 +25,12 @@ function reset() {
 	squaresFilled = 0;
 	
 	var canvas = document.getElementById("position");
-	
 	document.body.removeChild(canvas);
 	createGameField();
-	
-	$("canvas").click(function(e){	
-		var x = e.pageX - this.offsetLeft;
-		var y = e.pageY - this.offsetTop;
-		coorHandler(x, y);
-	//$("#status2").html("X = " + x + "<br>" + "Y = " + y);
-	});
-	
-	
 }
 
 
 function coorHandler(x, y) {
-	//console.log(symbol);
 	if(x <= 130 && x >= 40 && y <= 120 && y >= 40) {
 		square = 1;
 		if(checkIfAvailable(arr, square)) {
@@ -97,12 +85,6 @@ function coorHandler(x, y) {
 			checkWhosTurn(260, 270, square);
 		}
 	}
-	
-	
-	//console.log(x + " " + y);
-	//console.log(symbol);
-	
-	
 }
     	
 function createGameField() {
@@ -120,7 +102,6 @@ function createGameField() {
 	
 	// Game field
 	var ctx = canvas.getContext("2d");
-	
 	
 	//Top line
 	ctx.beginPath();
@@ -149,8 +130,6 @@ function createGameField() {
 	ctx.lineTo(220,40);
 	ctx.closePath();
 	ctx.stroke();
-
-	
 }
 
 function winCheckO(arrO) {
