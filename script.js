@@ -203,6 +203,7 @@ function drawCircle(x, y) {
 	ctx.arc(x, y, 20, 0, Math.PI*2); 
 	ctx.lineWidth = 5;
 	ctx.closePath();
+	ctx.strokeStyle = '#ff0000';
 	ctx.stroke();
 	winCheckO(arrO);
 	squaresFilled++;
@@ -217,6 +218,7 @@ function drawCross(x, y) {
     ctx.lineTo(x - 20, y + 20);
     ctx.lineWidth = 5;
 	ctx.closePath();
+	ctx.strokeStyle = '#000';
 	ctx.stroke();
 	winCheckX(arrX);
 	squaresFilled++;
