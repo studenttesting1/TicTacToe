@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Position of the mouse relative to the canvas
 $(document).ready(function(){
 	createGameField();
@@ -225,7 +225,7 @@ function winLine() {
 
 
 
-=======
+
 // Position of the mouse relative to the canvas
 $(document).ready(function(){
 	createGameField();
@@ -452,4 +452,4 @@ function winLine() {
 
 
 
->>>>>>> d4e905498a9324058f32a932d1082a0ea0a7f1f3
+
