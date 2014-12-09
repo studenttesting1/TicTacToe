@@ -16,20 +16,6 @@ var square = 0;
 var squaresFilled = 0;
 var winnigCombinations = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]];
 
-function reset() {
-	var symbol = "cross";
-	arr = new Array();
-	arrO = new Array();
-	arrX = new Array();
-	square = 0;
-	squaresFilled = 0;
-	
-	var canvas = document.getElementById("position");
-	document.body.removeChild(canvas);
-	createGameField();
-}
-
-
 function coorHandler(x, y) {
 	if(x <= 130 && x >= 40 && y <= 120 && y >= 40) {
 		square = 1;
@@ -143,7 +129,7 @@ function winCheckO(arrO) {
 						counter++;
 			 			if(counter === 3) {
 			 				alert("Zmagal KROG!");
-			 				reset();
+			 				location.reload(true);
 			 			}
 		 			}	
 				}
@@ -164,8 +150,7 @@ function winCheckX(arrX) {
 						counter++;
 			 			if(counter === 3) {
 			 				alert("Zmagal KRIZ!");
-			 				//location.reload(true);
-			 				reset();
+			 				location.reload(true);
 			 			}
 		 			}	
 				}
